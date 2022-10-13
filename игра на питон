@@ -1,0 +1,22 @@
+import random
+def bebra():
+    arit = '+'
+    number1 = 0
+    number2 = 0
+    answ = 0
+    number1 = random.choice(range(10))
+    number2 = random.choice(range(10))
+    question = str(number1) + arit + str(number2)
+    answ = number1 + number2
+    return (question,answ)
+
+lives = 3
+while lives > 0:
+    A = bebra()
+    print(A[0] + '=')
+    while int(input()) != A[1]:
+        print("пример решен неправильно")
+        lives = lives - 1
+        if lives < 1: break
+    else:
+        print("пример решен правильно, количество попыток: " + str(3-lives))
