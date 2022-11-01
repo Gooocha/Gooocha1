@@ -1,0 +1,4 @@
+F = int(input())
+C = int(input())
+V = int(input())
+print((F + 1) // 2 + (C + 1) // 2 + (V + 1) // 2)
