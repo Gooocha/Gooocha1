@@ -1,0 +1,6 @@
+lst = input().split()
+collection: dict[str, int] = {}
+for i in lst:
+    f = collection.get(i, 0)
+    print(f, end="")
+    collection[i] = f + 1
