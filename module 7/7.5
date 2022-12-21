@@ -1,0 +1,21 @@
+oper = []
+files = []
+count = int(input())
+for i in range(0, count):
+    info1 = input()
+    info = ''
+    for k in info1:
+        info += k.replace('R', 'read').replace('W', 'write').replace('X', 'execute')
+    info1 =info
+    files.append(info1)
+opcount = int(input())
+for j in range(0, opcount):
+    info1 = input()
+    oper.append(info1.split())
+for operation in oper:
+    for file in files:
+        if operation[1] in file:
+            if operation[0] in file:
+                print('ok')
+            else:
+                print('denied')
