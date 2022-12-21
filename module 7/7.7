@@ -1,0 +1,12 @@
+import operator
+dict = {}
+count = int(input())
+for i in range(0, count):
+    lst = input().split()
+    for z in lst:
+        if z in dict:
+            dict[z] = str(int(dict[z]) + 1)
+        else:
+            dict[z] = str(1)
+for name, count in sorted(dict.items(), key= operator.itemgetter(1), reverse=True):
+    print(name + ' ' + count)
