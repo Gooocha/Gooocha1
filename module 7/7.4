@@ -1,0 +1,14 @@
+answer = ''
+max = 0
+lst = []
+count = int(input())
+for i in range(0, count):
+    sp = input().split(' ')
+    for x in sp:
+        lst.append(x)
+lst = sorted(lst)
+for word in lst:
+    if lst.count(word) > max:
+        answer = word
+        max = lst.count(word)
+print(answer)
