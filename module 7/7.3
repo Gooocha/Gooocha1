@@ -1,0 +1,10 @@
+dictionary = {}
+count = int(input())
+for i in range(0, count):
+    word, znach = input().split()
+    if word in dictionary:
+        dictionary[word] = str(int(znach) + int(dictionary[word]))
+    else:
+        dictionary[word] = znach
+for word, znach in sorted(dictionary.items()):
+    print(word + ' ' + znach)
