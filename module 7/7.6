@@ -1,0 +1,13 @@
+t1 = []
+t2 = []
+count = int(input())
+for i in range(0, count):
+    t1.append(input().split())
+scount = int(input())
+for j in range(0, scount):
+    t2.append(input())
+for z in t2:
+    for x in t1:
+        if z in x:
+            print(x[0])
+            break
